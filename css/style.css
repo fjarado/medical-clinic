@@ -1,0 +1,727 @@
+/*============= RESET STYLE =============
+FONTS:
+Body: font-family: 'Roboto', sans-serif;
+Nav & Headings: font-family: 'Roboto Condensed', sans-serif;
+*/
+
+/*-- iPhone X Remove Gutters
+Ignore W3C Validation error for this style. --*/
+html {
+   padding: env(safe-area-inset);
+}
+
+/*-- Body Resets --*/
+body {
+   background: #f9f9f9;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.15rem;
+   color: #293346;
+}
+
+/*-- Option: Add Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+   padding: 1rem;
+}
+
+/*-- Remove Blue Browser Outline Around Buttons in Chrome --*/
+a:focus,
+button:focus {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*-- Pointer Cursor On Links & Buttons --*/
+a, .btn, button {
+   cursor: pointer!important;
+}
+
+/*-- Max-width Container For Elements
+other than navbar, carousel, banner & footer --*/
+.wrapper {
+	max-width: 1120px;
+   margin: 0 auto;
+   padding: 0 .5rem;
+   overflow: hidden;
+}
+
+/*-- Headings --*/
+h1 {
+   font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	font-size: 175%;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	padding: .6rem 0;
+}
+h2, h3, h4 {
+   font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+h5 {
+   font-family: 'Roboto Condensed', sans-serif;
+   font-weight: 700;
+}
+/*-- Make Paragraph 'lead' Class Text Larger--*/
+p.lead {
+   font-size: 1.1rem;
+}
+
+/*-- Remove Link Color/Underline from Phone #s --*/
+a {
+   color: #293346;
+}
+a:hover {
+   color: #293346;
+   text-decoration: none;
+}
+
+/*-- Buttons --*/
+.btn {
+   font-weight: 700;
+   text-transform: uppercase;
+   border-width: medium;
+   padding: .6rem 1.2rem;
+   margin: .5rem;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .08);
+   transition: all .3s ease;
+   border-radius: 0;
+ }
+.btn-blue {
+   border-color: #53668c;
+   background-color: #53668c;
+   color: white;
+ }
+.btn-blue:hover,
+.btn-blue:focus  {
+   border-color: #2c3b59;
+   background-color: #2c3b59;
+   color: white;
+}
+
+/*-- Background Colors --*/
+.bg-blue {
+   background-color: rgba(66, 81, 112, .9);
+   color: #FFF;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+ }
+.bg-clear {
+   background-color: rgba(255, 255, 255, .9);
+   color: #293346;
+   box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+
+/*-- Center All Images & Set Max Width --*/
+img {
+   display: block;
+	margin: 0 auto;
+   max-width: 100%;
+}
+
+/*============= TOP BAR HEADER =============*/
+.top-bar {
+   height: 2.5rem;
+   padding: .4rem 0 .5rem;
+}
+.top-bar [class*="col-"] {
+   padding: 0!important;
+   margin: 0!important;
+}
+.top-bar p, .top-bar a {
+   color: #425170!important;
+   text-decoration: none!important;
+   font-size: 1rem;
+   display: inline;
+}
+ul.social {
+   display: table;
+   list-style-type: none;
+   margin: 0 auto;
+   padding: 0;
+}
+ul.social li {
+   display: inline;
+   padding: 0 .5rem;
+}
+.top-bar .svg-inline--fa.fa-w-14 {
+   color: #647597;
+   font-size: 1.45rem;
+   transition: all 0.5s ease 0s;
+}
+.top-bar .svg-inline--fa.fa-w-14:hover {
+   color: #293346;
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar {
+   padding: 0;
+   background-color: rgba(66, 81, 112, .9); /* #53668c (for non-transparent menu */
+   box-shadow: 0 -.5rem .5rem .1rem rgba(0, 0, 0,.02);
+   padding: .5rem 0 .3rem;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-weight: 900;
+   text-transform: uppercase;
+}
+.navbar .container {
+   max-width: 950px;
+}
+.navbar-brand img {
+   height: 3rem;
+}
+.svg-inline--fa.fa-bars {
+   color: #FFF;
+   font-size: 1.7rem;
+}
+.navbar-nav li {
+   padding-right: .5rem;
+}
+.navbar-nav .nav-link {
+   font-size: 1.2rem;
+   padding-top: 0rem;
+   color: #F5F5F5;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+   color: #FFF!important;
+   border-bottom: .15rem solid #FFF;
+}
+.nav-item {
+   padding: 1rem .8rem .5rem .8rem;
+}
+
+/*--- Drop-down Menu --*/
+.dropdown-menu, .dropdown-item {
+   font-size: 1.1rem;
+   font-weight: 400!important;
+   /*background-color: #53668C; (for non-transparent menu) */
+   border: 0;
+   color: #F5F5F5;
+   text-align: center;
+   padding: 0;
+}
+.dropdown-menu {
+   /*background-color: #53668C; (for non-transparent menu) */
+   margin-top: 0!important;
+   border-radius: 0;
+   z-index: 1000;
+}
+.dropdown-menu:hover, .dropdown-item:hover,
+.dropdown-menu:focus, .dropdown-item:focus,
+.dropdown-toggle:active, .dropdown-toggle:focus {
+   color: #FFF!important;
+   background-color: transparent; /*#53668C (for non-transparent menu) */
+}
+.dropdown-item {
+   padding: .3rem 0!important;
+}
+.dropdown-item:hover {
+   text-decoration: underline;
+}
+.dropdown-submenu > .dropdown-menu {
+   width: 100%;
+   z-index: 1000;
+}
+li.nav-item.dropdown.show ul {
+   background-color: rgba(66, 81, 112, .9); /*#53668C (for non-transparent menu) */
+   margin-top: .3rem!important;
+}
+.dropdown.show ul li.dropdown-submenu ul {
+   background-color: rgba(66, 81, 112, .9); /*#53668C (for non-transparent menu) */
+   margin-top: 0!important; 
+}
+
+/*============= CAROUSEL IMAGE SLIDER =============*/
+
+.carousel-inner {
+   max-height: 38rem!important;
+   box-shadow: 0 .65rem .65rem .1rem rgba(0, 0, 0,.15);
+}
+.carousel-inner img {
+   min-width: 100%;
+}
+
+/*-- Change Carousel Transition Speed --*/
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+   display: block;
+   transition: -webkit-transform 1.2s ease;
+   transition: transform 1.2s ease;
+   transition: transform 1.2s ease,-webkit-transform 1.2s ease;
+}
+
+/*-- Carousel Previous & Next Buttons --*/
+.carousel-control-prev,
+.carousel-control-next {
+   width: 8%;
+   cursor: pointer!important;
+}
+.carousel-control-next {
+   padding-right: 3.2rem!important;
+}
+.carousel-control-prev .svg-inline--fa,
+.carousel-control-next .svg-inline--fa {
+   position: absolute;
+   font-size: 2.5rem!important;
+   padding: .2rem .6rem;
+   color: #293346;
+   background-color: #FFF;
+   opacity: .6;
+   transition: all .5s ease;
+}
+.carousel-control-prev .svg-inline--fa:hover,
+.carousel-control-next .svg-inline--fa:hover {
+   color: #293346;
+   background-color: #FFF;
+   box-shadow: 0 0 .65rem rgba(0, 0, 0, .15);
+   opacity: 1;
+   cursor: pointer;
+   transition: all .5s ease;
+}
+
+/*-- Make Carousel Prev/Next Buttons Visible On Hover --*/
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s linear 1000s, opacity 1000ms;
+}
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+   visibility: visible !important;
+   opacity: 1;
+   transition: visibility 0s linear 0s, opacity 1000ms;
+}
+
+/*-- Carousel Caption --*/
+.carousel-caption {
+   left: 12%;
+   right: 12%;
+   position: absolute;
+   transform: translateY(-50%);
+   top: 45%;
+ }
+ .carousel-caption.text-left,
+ .carousel-caption.text-right {
+   top: 45%;
+ }
+ .carousel-caption p {
+   font-weight: 500;
+ }
+
+/*============= HOME PAGE =============*/
+
+/*-- Home Page Heading --*/
+h1.title {
+   font-size: 3rem;
+}
+
+/*-- Blue Border Under Heading --*/
+hr.border-blue {
+   max-width: 96%;
+   margin: 0 auto;
+   border-top: .3rem solid #405580;
+}
+
+/* Add Border Radius & Shadow to Images --*/
+/* img.round {
+   /* border-radius: .2rem; 
+   box-shadow: 0 0 .65rem rgba(0, 0, 0, .1); 
+}  */
+
+/*-- List Item Box --*/
+.list-group {
+   box-shadow: 0 0 .65rem rgba(0, 0, 0, .1);
+}
+.list-group li {
+   background-color: #f9f9f9;
+   text-align: center;
+   padding: .4rem;
+   color: #53668C;
+   font-size: 1.25rem;
+   letter-spacing: .1rem;
+}
+.list-group .svg-inline--fa {
+   font-size: 1.8rem;
+   margin-right: .7rem;
+   color: #53668C;
+}
+
+/*-- Border Around Callout Text & Button --*/
+.callout-border {
+   border: .15rem solid #405580;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+}
+
+/*============= FOOTER (all pages) =============*/
+
+.footer {
+   background-color: #454545;
+   box-shadow: 0 0 .8rem .1rem rgba(0, 0, 0,.08);
+}
+.footer h3 {
+   font-size: 1.5rem;
+   text-decoration: underline;
+   padding-bottom: 1rem;
+}
+.footer img { /*-- (logo) --*/
+   max-width: 15rem;
+   padding-bottom: .5rem;
+}
+.footer a {
+   color: #FFF;
+}
+
+/*-- Footer Social Icons --*/
+.footer ul.social li {
+   padding: .5rem .5rem;
+}
+.footer .svg-inline--fa {
+   color: #FFF;
+   font-size: 1.9rem;
+   transition: all 0.5s ease 0s;
+   box-shadow: 0 0 .15rem rgba(0, 0, 0, .1);
+}
+.footer .svg-inline--fa:hover {
+   color: #7a859a;
+}
+.footer h3 {
+   text-decoration: none;
+}
+
+/*-- Footer List Group --*/
+.footer .list-group {
+   box-shadow: none;
+}
+.footer .list-group-item {
+   border-radius: 0!important;
+}
+.footer .list-group li {
+   background-color: #454545;
+   text-align: center;
+   padding: .6rem 0 .4rem;
+   color: #FFF;
+   border: .05rem solid #7c7c7c;
+   font-size: 1.25rem;
+   letter-spacing: .1rem;
+}
+.footer .list-group .svg-inline--fa {
+   font-size: 1.8rem;
+   margin-right: .7rem;
+   color: #53668C;
+}
+
+/*-- Socket Copyright --*/
+.socket {
+   background-color: #3c3c3c;
+   color: #c1c1c1;
+}
+.socket a {
+   color: #c1c1c1;
+}
+
+/*-- Top Scroll Button --*/
+
+.scroll-container {
+   width: 2.2rem;
+   float: right;
+}
+.top-scroll svg.svg-inline--fa {
+   font-size: 1.6rem!important;
+   height: 2.2rem;
+   width: 2.5rem;
+   color: #293346;
+   background-color: white;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .05);
+   transition: all .5s ease;
+}
+a.top-scroll {
+   bottom: 1.2rem;
+   position: fixed;
+   opacity: .3;
+   z-index: 1000;
+   display: none;
+}
+a.top-scroll:hover {
+   opacity: .9;
+   transition: all .5s ease;
+}
+ 
+/*============= ABOUT PAGE =============*/
+
+/*-- Breadcrumbs (all pages other than home page) --*/
+.bread-banner {
+	width: 100%;
+	height: 4.5rem;
+   background-color: #DCDCDC;
+   color: #394560;
+}
+.bread-banner a {
+   color: #394560;
+}
+.bread-banner a:hover {
+   color: #5e74a0;
+}
+
+/*-- Bootstrap Cards (Meet Trainers) --*/
+.card {
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);
+   background-color: #f9f9f9;
+   border-radius: .5rem;
+}
+.card-img-top {
+   border-radius: .5rem .5rem 0 0;
+   box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .05);
+}
+.card ul.social li {
+   padding: .5rem .5rem;
+}
+.card .svg-inline--fa {
+   color: #647597;
+   font-size: 1.7rem;
+   transition: all 0.5s ease 0s;
+   box-shadow: 0 0 .15rem rgba(0, 0, 0, .1);
+}
+.card .svg-inline--fa:hover {
+   color: #293346;
+}
+
+/*============= CLASSES PAGE =============*/
+
+
+/*============= PRICING PAGE =============*/
+
+/*-- Pricing Table --*/
+table, tr {
+   border: .15rem solid #405580;
+}
+.thread-green {
+   background-color: #405580;
+   border-bottom: .15rem solid #405580;
+}
+thead th, thead td {
+   color: white;
+   border-top: 0!important;
+   border-bottom: 0!important;
+   border-right: .1rem solid #9faabf;
+}
+th, td {
+   font-weight: 700;
+   color: #405580;
+   border-right: .1rem solid #000;
+}
+td .svg-inline--fa {
+   font-size: 1.3rem;;
+}
+
+/*============= CONTACT PAGE =============*/
+
+/*-- Contact Form --*/
+.form-group {
+   margin-bottom: 1.3rem;
+   box-shadow: 0 0 .2rem rgba(0, 0, 0, .05);
+}
+.form-control {
+   background: #f9f9f9;
+   border-radius: .1rem;
+   border: .15rem solid #7988a6;
+   color: #334466!important;
+   font-size: 1.1rem;
+}
+.form-control:focus {
+   background: #f5f6f8;
+   border: .15rem solid #334466;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+   color: #8E7A6D;
+}
+input.btn {
+   float: right;
+}
+.controls input:focus,
+.controls textarea:focus { /*-- Remove Element Outlines in Contact Form --*/
+  outline: 0 !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+/*============= MEDIA QUERIES =============*/
+
+/* Large (lg) devices (desktops, 992px and under) */
+@media (max-width: 991.98px) {
+   .navbar {
+      padding: .25rem 5rem;
+   }
+   .navbar-nav .nav-link {
+      font-size: 1.2rem;
+   }
+   .navbar-nav .nav-link.active,
+   .navbar-nav .nav-link:hover {
+      border-bottom: 0;
+      text-decoration: underline;
+   }
+   li.nav-item.dropdown.show ul {
+      background-color: transparent;
+      margin-top: .3rem!important;
+   }
+   .dropdown.show ul li.dropdown-submenu ul {
+      background-color: transparent;
+      margin-top: 0!important; 
+   }
+   a.dropdown-item {
+      text-align: left;
+   }
+   .carousel-caption h2 {
+      font-size: 1.7rem;
+   }
+}
+
+/* Medium (md) devices (tablets, 768px and under) */
+@media (max-width: 767.98px) {
+   header img {
+      max-width: 20rem;
+   }
+   .navbar {
+      padding: .2rem 2.5rem;
+   }
+   .navbar-nav .nav-link {
+      font-size: 1.1rem;
+   }
+   .dropdown-menu, .dropdown-item {
+      font-size: 1rem;
+    }
+   .carousel-caption {
+      top:38%;
+   }
+   .carousel-caption h2 {
+      font-size: 1.5rem;
+   }
+   .btn {
+      padding: .45rem 1rem;
+   }
+   h1.title {
+      font-size: 2.2rem;
+   }
+   p.lead {
+      font-size: 1.05rem;
+   }
+   th, td {
+      font-size: .9rem;
+   }
+   td .svg-inline--fa {
+      font-size: 1.1rem;;
+   }
+}
+
+/* Small (sm) devices (landscape phones, 576px and under) */
+@media (max-width: 575.98px) {
+   .navbar {
+      padding: .2rem .5rem;
+   }
+   .navbar-nav li {
+      border-top: 0;
+   }
+   .carousel-caption {
+      top:32%!important;
+   }
+   .carousel-caption h2 {
+      font-size: 1.3rem;
+   }
+   .btn {
+      padding: .4rem .9rem;
+   }
+   h1.title {
+      font-size: 1.9rem;
+   }
+   h2 {
+      font-size: 1.8rem;
+   }
+   h3 {
+      font-size: 1.7rem;
+   }
+}
+
+/*============ BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
+
+/*============= WAYPOINTS =============*/
+
+/*-- OPTION: TURN OFF ANIMATION OFF COMPLETELY::
+Note: may effect line progress bar with slight delay,
+line-progressbar waypoints can be adjusted at bottom of plugins.js.--*/
+
+
+/* remove this CSS comment to activate
+
+.animated, .os-animation {
+  -webkit-animation: none!important;
+  -moz-animation: none!important;
+  -o-animation: none!important;
+  animation: none!important;
+  opacity: 1!important;
+  -webkit-animation-delay: none !important;
+  -moz-animation-delay: none !important;
+  animation-delay: none !important;
+  }
+
+*/
+
+/*-- OPTION: TURN OFF ANIMATION ON MOBILE::
+Note: may effect line progress bar with slight delay,
+line-progressbar waypoints can be adjusted at bottom of plugins.js.--*/
+
+
+/* remove this CSS comment to activate
+
+@media (max-width: 767px) {
+	.animated, .os-animation {
+	  -webkit-animation: none!important;
+	  -moz-animation: none!important;
+	  -o-animation: none!important;
+	  animation: none!important;
+	  opacity: 1!important;
+	  -webkit-animation-delay: none !important;
+	  -moz-animation-delay: none !important;
+	  animation-delay: none !important;
+	  }
+	}
+
+*/
+
+
+/*--- Prevent WayPoints from Browser Window Scrolling On Mobile --*/
+/* Devices under 768px (md) */
+@media (max-width: 767px) {
+   .row {
+     overflow-x: hidden;
+     overflow-y: hidden;
+   }
+ }
+ 
+/*-- Don't modify waypoints CSS below,
+this is required for waypoints to work --*/
+.os-animation{
+   opacity: 0;
+   margin: 0!important;
+   max-width: 100%;
+}
+.os-animation.animated {
+   opacity: 1;
+}
